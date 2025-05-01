@@ -59,6 +59,9 @@ project/
 - Use the sliders and dropdowns to filter data by year, country, or region.
 - Navigate through tabs to view various charts including line charts for trends and scatter plots for correlations
 
+## Public link
+https://js-world-happiness-mnn8egd2k76g6n9mwxm7in.streamlit.app/
+
 ## Acknowledgments
 Data courtesy of Ipsos.
 
