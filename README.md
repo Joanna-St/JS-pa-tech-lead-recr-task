@@ -31,9 +31,7 @@ project/
 ├── pycache/
 │   └── data_processing.cpython-310.pyc
 ├── .gitignore
-├── data_processing.ipynb
 ├── data_processing.py
-├── Dockerfile
 ├── LICENSE
 ├── README.md
 ├── requirements.txt
