@@ -1,85 +1,67 @@
-# 🌍 World Happiness Dashboard
+# World Happiness Dashboard
 
-Welcome!
+## Overview
+The World Happiness Dashboard is an interactive web application built with Streamlit that visualizes global happiness trends using data collected by [Ipsos](https://ipsos.com) from 2015 to 2019. Users can explore different dimensions of happiness and social factors through various features, including line charts, scatter plots, and rankings.
 
-This take-home assignment is designed to help us understand your Python, data wrangling, and lightweight app-building skills. It's based on the **World Happiness Report** dataset and is intended to be practical, open-ended, and fun.
+## Features
+- **Year Selection**: Choose a specific year or range of years to analyze data.
+- **Country/Region Filtering**: Filter views by country or region.
+- **Happiness Rankings**: Display top 10, bottom 10, and full rankings for a selected year.
+- **Correlation Plots**: Visualize relationships between happiness scores and other socio-economic factors.
+- **Interactive Charts**: Use Altair charts for dynamic interaction and detailed data exploration.
+- **Customized Visual Appearance**: Includes company branding with custom themes and logos.
 
-## 🎯 Objective
+## Folder Structure
+│   .gitignore
+│   data_processing.py
+│   Dockerfile
+│   LICENSE
+│   README.md
+│   requirements.txt
+│   streamlit_app.py
+│
+├───.devcontainer
+│       devcontainer.json
+│
+├───.streamlit
+│       config.toml
+│
+├───data
+│       2015.csv
+│       2016.csv
+│       2017.csv
+│       2018.csv
+│       2019.csv
+│
+├───resources
+│   └───static
+│       └───images
+│               Ipsos logo with transparent background.png
 
-Build an interactive [Streamlit app](https://streamlit.io/) that allows users to explore and compare happiness metrics across countries and years.
 
-You'll use the World Happiness dataset and [Pandas](https://pandas.pydata.org) + Streamlit to:
-- Load and clean the data
-- Visualize happiness scores across countries, regions, and time
-- Allow simple filtering and exploration
+## Installation
 
-
-## 🗃️ Dataset
-
-The World Happiness data is available in the /data folder of this repository as individual per year csv files that hold happines KPIs. 
-
-## 📌 Features (Minimum)
-
-Your Streamlit app should allow the user to:
-
-1. **Select a year** (if using multi-year data)
-2. **Filter by region** or country
-3. **View happiness rankings**
-   - Display top N happiest countries
-   - Display bottom N countries
-4. **Plot correlations** between score components and happiness score
-
-Bonus:
-- Time trend visualizations (if using multi-year)
-- Display (your) statistical insights (e.g., "most influential factor")
-- Add explanations or hover-tooltips for variables
-- Change the default color scheme to something that you like.
-- Do a multi-page app.
-
-## 🛠️ Tech Requirements
-
+### Prerequisites
 - Python 3.9 - 3.11
-- Pandas
-- Streamlit
-- Any data viz libs you're comfortable with (Matplotlib, Seaborn, Plotly, etc.)
-- At minimum, have a requirements.txt file and a README.md files that explain how to run your app locally.
+- Pip (Python package manager)
 
-## 📦 Submission Guidelines
-
-Please share a GitHub repo or a zipped folder containing:
-
-- Your source code as Python scripts
-- `README.md` with setup instructions
-- `requirements.txt` for dependencies
-- Bonus: `Dockerfile` if you'd like to show deployment readiness (optional)
-- Bonus: Use an environment manager, such as [uv](https://docs.astral.sh/uv/guides/install-python)
-- Bonus: Figure out how to host your app publicly without paying any money.
+### Setup
+1. **Clone the repository**
+2. **Install dependencies:** pip install -r requirements.txt
+3. **Run the application:** streamlit run streamlit_app.py
 
 
-## ⏱️ Timeline
-Submissions are valid if the following criteria are completed - No longer than 7 callendar days after you're given access to this repo:
-- A solution needs to be submitted to your own github repository (unless a zip file is to be delivered.)
-- An email, informing Ivelin.Hristov@ipsos.com and HR.bulgaria@ipsos.com about the submission is sent through.
-- No changes or submissions will be accepted after this period.
+## Configuration
+- The application uses a config.toml file for theme customization located in the .streamlit directory.
+- The logo used in the application is located in resources/static/images.
 
-Pro tip: Focus on clarity, completeness, and pragmatism over perfection.
+## Local usage
+- Launch the application using the terminal command provided in the setup section.
+- Use the sliders and dropdowns to filter data by year, country, or region.
+- Navigate through tabs to view various charts including line charts for trends and scatter plots for correlations
 
-## ✅ Evaluation Criteria
+## Acknowledgments
+Data courtesy of Ipsos.
 
-We'll evaluate your submission based on:
-
-| Criteria                | Weight |
-|-------------------------|--------|
-| Code quality (clean, modular, readable) | ⭐⭐⭐⭐ |
-| Data handling & transformations | ⭐⭐⭐ |
-| Streamlit UI design & interactivity | ⭐⭐⭐ |
-| Visualizations & insights | ⭐⭐⭐ |
-| Self documentation & usability | ⭐⭐ |
-| Initiative & extras (bonus features, design, etc.) | ⭐⭐ |
-
-## 🙌 Good Luck!
-
-We’re excited to see how you explore this data and build an app. If you’d like to explain or highlight any part of your approach, feel free to leave a note in the README or as code comments.
-
-Happy coding!  
-— The PA Tech Team
+## Contact
+For questions or feedback, please contact the project maintainer at joanna.stoyanova@ipsos.com.
