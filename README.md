@@ -12,32 +12,33 @@ The World Happiness Dashboard is an interactive web application built with Strea
 - **Customized Visual Appearance**: Includes company branding with custom themes and logos.
 
 ## Folder Structure
-│   .gitignore
-│   data_processing.py
-│   Dockerfile
-│   LICENSE
-│   README.md
-│   requirements.txt
-│   streamlit_app.py
-│
-├───.devcontainer
-│       devcontainer.json
-│
-├───.streamlit
-│       config.toml
-│
-├───data
-│       2015.csv
-│       2016.csv
-│       2017.csv
-│       2018.csv
-│       2019.csv
-│
-├───resources
-│   └───static
-│       └───images
-│               Ipsos logo with transparent background.png
-
+```
+project/
+├── .devcontainer/
+│   └── devcontainer.json
+├── .streamlit/
+│   └── config.toml
+├── data/
+│   ├── 2015.csv
+│   ├── 2016.csv
+│   ├── 2017.csv
+│   ├── 2018.csv
+│   └── 2019.csv
+├── resources/
+│   └── static/
+│       └── images/
+│           └── Ipsos logo with transparent background.png
+├── pycache/
+│   └── data_processing.cpython-310.pyc
+├── .gitignore
+├── data_processing.ipynb
+├── data_processing.py
+├── Dockerfile
+├── LICENSE
+├── README.md
+├── requirements.txt
+└── streamlit_app.py
+```
 
 ## Installation
 
