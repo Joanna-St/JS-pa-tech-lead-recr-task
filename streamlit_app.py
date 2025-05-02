@@ -136,7 +136,20 @@ for tab, factor in zip(tabs, factors):
 
         st.altair_chart(scatter_chart, use_container_width=True)
 ''
+
+st.markdown("""
+**Correlation Insights: Factors Influencing Happiness**
+
+The analysis of global happiness data over several years reveals interesting insights:
+
+- **GDP per Capita** and **Life Expectancy** show the strongest correlations with happiness scores, underscoring the significance of economic prosperity and health as primary determinants of happiness. These factors suggest that material well-being and longevity contribute positively to people's overall happiness.
+
+- **Freedom** presents a moderate correlation with happiness, highlighting the role of personal and political liberties in enhancing individuals' life satisfaction. This indicates that having the freedom to make personal choices contributes appreciably to happiness.
+
+- **Trust in Government** and **Generosity** are less closely correlated with happiness scores, suggesting that these factors may be influenced by regional and cultural variations. While these elements are important, their impact on happiness is not as pronounced as economic and health factors.
+""")
 ''
+
 # ------------------------Correlations End
 
 # ------------------------Ranking Start
