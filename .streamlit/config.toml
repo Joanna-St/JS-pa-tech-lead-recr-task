@@ -1,6 +1,8 @@
 [theme]
-primaryColor="#1ca0ba"
+primaryColor="#009D9C"
 backgroundColor="#0f0f0f"
-secondaryBackgroundColor="#F0F2F6"
+secondaryBackgroundColor="#15769C"
 textColor="#F0F2F6"
+linkColor="#009D9C"
 font="sans serif"
+borderColor = "#2F469C"

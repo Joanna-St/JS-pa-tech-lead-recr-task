@@ -126,7 +126,7 @@ for tab, factor in zip(tabs, factors):
         scatter_chart = alt.Chart(filtered_df).mark_circle(size=60).encode(
             x=alt.X(factor, scale=alt.Scale(zero=False)),
             y=alt.Y(target, scale=alt.Scale(zero=False)),
-            color=alt.Color('Region').scale(scheme="yellowgreenblue"),
+            color=alt.Color('Happiness Rank').scale(scheme="yellowgreenblue"),
             tooltip=["Country", target, factor]
         ).properties(
             width=600,
@@ -160,11 +160,11 @@ chart2 = alt.Chart(filtered_df.sort_values('Happiness Rank', ascending=False).he
 ).interactive()
 
 
-chart3 = alt.Chart(filtered_df.sort_values('Happiness Rank', ascending=False)).mark_bar().encode(
-    x='Happiness Score',
-    y=alt.Y('Country', sort='-x'),
-    color=alt.Color('Happiness Rank').scale(scheme="yellowgreenblue")
-).interactive()
+# chart3 = alt.Chart(filtered_df.sort_values('Happiness Rank', ascending=False)).mark_bar().encode(
+#     x='Happiness Score',
+#     y=alt.Y('Country', sort='-x'),
+#     color=alt.Color('Happiness Rank').scale(scheme="yellowgreenblue")
+# ).interactive()
 
 tab1.altair_chart(chart1)
 ''
@@ -172,7 +172,11 @@ tab1.altair_chart(chart1)
 tab2.altair_chart(chart2)
 ''
 
-tab3.altair_chart(chart3)
+with tab3:
+    rankings_df = filtered_df[['Country', 'Happiness Score', 'Happiness Rank']].sort_values('Happiness Rank')
+    rankings_df.set_index('Happiness Rank', inplace=True)
+    st.dataframe(rankings_df, height=250, use_container_width=True)
+
 # ------------------------Ranking End
 
 # Footer
